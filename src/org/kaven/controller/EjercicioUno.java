@@ -1,8 +1,7 @@
 package org.kaven.controller;
 import java.util.Scanner;
-import java.util.random.RandomGenerator;
 
-public class EjercicioOne {
+public class EjercicioUno {
     public void One(){
         int numero;
         Scanner sc = new Scanner(System.in);

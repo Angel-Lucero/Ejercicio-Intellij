@@ -1,46 +1,55 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-
 import java.util.Scanner;
-import org.kaven.controller.EjercicioOne;
-import org.kaven.controller.EjercicioTwo;
+
+import org.kaven.controller.EjercicioCuatro;
+import org.kaven.controller.EjercicioTres;
+import org.kaven.controller.EjercicioUno;
+import org.kaven.controller.EjercicioDos;
 
 public class Main {
     public static void main(String[] args) {
-        boolean a = false;
+        boolean salir = false;
+        Scanner sc = new Scanner(System.in);
         do {
-            System.out.printf("Bienvenido al listado de actividades\n");
-            Scanner sc = new Scanner(System.in);
-            System.out.println("0.Cerrar el programa");
-            System.out.println("1.Numeros pares");
-            System.out.println("2.Numero primo");
-            System.out.println("3.Numero aleatorio");
-            System.out.println("4.Conversion grados");
-            System.out.println("5.CRUD");
+            System.out.println("Bienvenido al listado de actividades");
+            System.out.println("0. Cerrar el programa");
+            System.out.println("1. Números pares");
+            System.out.println("2. Número primo");
+            System.out.println("3. Número aleatorio");
+            System.out.println("4. Conversión grados");
+            System.out.println("5. CRUD");
             System.out.println("6.Lo de la DB");
             int opcion = sc.nextInt();
             switch (opcion) {
+                case 0:
+                    salir = true;
+                    System.out.println("Saliendo del programa...");
+                    break;
                 case 1:
-                    EjercicioOne uno = new EjercicioOne();
+                    EjercicioUno uno = new EjercicioUno();
                     uno.One();
                     break;
                 case 2:
-                    EjercicioTwo dos = new EjercicioTwo();
+                    EjercicioDos dos = new EjercicioDos();
                     dos.Two();
                     break;
                 case 3:
-
+                    EjercicioTres tres = new EjercicioTres();
+                    tres.Three();
                     break;
                 case 4:
-
+                    EjercicioCuatro cuatro = new EjercicioCuatro();
+                    cuatro.Four();
                     break;
                 case 5:
-
+                    System.out.println("Esto ya no se realiza");
                     break;
                 case 6:
-
+                    System.out.println("Esto ya no se realiza");
                     break;
+                default:
+                    System.out.println("Opción no válida");
             }
-        } while (!a);
+        } while (!salir);
+        sc.close();
     }
 }
