@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class EjercicioUno {
     public void One(){
-        int numero;
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese un numero a verificar");
         int numeroA = sc.nextInt();
